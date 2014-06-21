@@ -6,9 +6,12 @@ name := "android-error-dialog"
 
 organization := "com.github.ikuo"
 
-version := "0.1.2-SNAPSHOT"
+version := "0.1.3-SNAPSHOT"
 
 scalaVersion := "2.10.3"
+
+scalacOptions in Compile ++=
+  Seq("-deprecation", "-feature", "-language:implicitConversions", "-unchecked")
 
 minSdkVersion in Android := 15
 

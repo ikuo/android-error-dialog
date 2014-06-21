@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="cannot_continue">エラーのため実行を継続できません。</string>
+    <string name="expand_view">表示を展開</string>
+    <string name="collapse_view">表示を折りたたむ</string>
+    <string name="technical_detail">技術的な詳細</string>
+    <string name="no_info">（情報がありません）</string>
+    <string name="quit">終了する</string>
+    <string name="show_crash_dialog">エラー画面を表示</string>
+</resources>
