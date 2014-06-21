@@ -1,6 +1,6 @@
 import android.Keys._
 
-android.Plugin.androidBuild
+android.Plugin.androidBuildAar
 
 name := "android-error-dialog"
 
