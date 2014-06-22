@@ -19,7 +19,7 @@ resolvers += "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositori
 libraryDependencies += aar("com.github.ikuo" % "android-error-dialog_2.10" % "0.2.0-SNAPSHOT")
 ```
 
-# License
+## License
 Apache License 2.0
 
 Copyright (c) 2014, Ikuo Matsumura
