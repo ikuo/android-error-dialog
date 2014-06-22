@@ -6,7 +6,7 @@ name := "android-error-dialog"
 
 organization := "com.github.ikuo"
 
-version := "0.1.3-SNAPSHOT"
+version := "0.2.0-SNAPSHOT"
 
 scalaVersion := "2.10.3"
 
@@ -20,7 +20,17 @@ targetSdkVersion in Android := 19
 platformTarget in Android :=
   "android-" + (targetSdkVersion in Android).value.toString
 
-publishTo := Some(Resolver.file("file", new File(Path.userHome.absolutePath + "/.m2/repository")))
+publishMavenStyle := true
+
+publishTo <<= version { (v: String) =>
+  val nexus = "https://oss.sonatype.org/"
+  if (v.trim.endsWith("SNAPSHOT"))
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
+
+publishArtifact in Test := false
 
 pomExtra := (
   <url>https://github.com/ikuo/android-error-dialog</url>

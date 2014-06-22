@@ -14,9 +14,9 @@ In [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) based project
 
 Add the following to build.sbt:
 ```
-resolvers += "Local Maven Repository" at "file://" + Path.userHome.absolutePath + "/.m2/repository"
+resolvers += "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
 
-libraryDependencies += aar("com.github.ikuo" % "android-error-dialog_2.10" % "0.1.3-SNAPSHOT")
+libraryDependencies += aar("com.github.ikuo" % "android-error-dialog_2.10" % "0.2.0-SNAPSHOT")
 ```
 
 # License
