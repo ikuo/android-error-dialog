@@ -14,10 +14,13 @@ In [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) based project
 
 Add the following to build.sbt:
 ```
-resolvers += "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
+resolvers += "Sonatype Releases" at "http://oss.sonatype.org/content/repositories/releases",
 
-libraryDependencies += aar("com.github.ikuo" % "android-error-dialog_2.10" % "0.2.0-SNAPSHOT")
+libraryDependencies += aar("com.github.ikuo" % "android-error-dialog_2.10" % "0.2.0")
 ```
+
+## TODO
+- Sign *.aar for sonatype.
 
 ## License
 Apache License 2.0

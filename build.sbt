@@ -6,7 +6,7 @@ name := "android-error-dialog"
 
 organization := "com.github.ikuo"
 
-version := "0.2.0-SNAPSHOT"
+version := "0.2.0"
 
 scalaVersion := "2.10.3"
 
@@ -17,8 +17,7 @@ minSdkVersion in Android := 15
 
 targetSdkVersion in Android := 19
 
-platformTarget in Android :=
-  "android-" + (targetSdkVersion in Android).value.toString
+platformTarget in Android := "android-19"
 
 publishMavenStyle := true
 
