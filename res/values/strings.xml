@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="cannot_continue">Cannot continue due to an error.</string>
+    <string name="cannot_continue">Cannot continue the process.</string>
     <string name="expand_view">Expand view</string>
     <string name="collapse_view">Collapse view</string>
     <string name="technical_detail">Technical Details</string>

@@ -14,11 +14,6 @@ class ErrorDialogFragment extends DialogFragment with TypedViewHolder {
   private var stackTrace: String = "(unknown)"
   private var message: String = null
 
-  override def onCreate(bundle: Bundle) {
-    super.onCreate(bundle)
-    readArgs(bundle)
-  }
-
   private lazy val btnCollapse  = findView(TR.btnCollapse)
   private lazy val btnExpand    = findView(TR.btnExpand)
   private lazy val tvStackTrace = findView(TR.tvStackTrace)
@@ -35,7 +30,7 @@ class ErrorDialogFragment extends DialogFragment with TypedViewHolder {
     builder.setPositiveButton(getString(R.string.quit), onDialogClick { quit })
     builder.setNegativeButton(getString(R.string.show_crash_dialog),
       new DialogInterface.OnClickListener() {
-        override def onClick(dialog: DialogInterface, whitch: Int) {
+        override def onClick(dialog: DialogInterface, whitch: Int): Unit = {
           throw new ExplicitErrorReport(stackTrace)
         }
       }
@@ -45,8 +40,9 @@ class ErrorDialogFragment extends DialogFragment with TypedViewHolder {
     builder.create
   }
 
-  override def onActivityCreated(onActivityCreated: Bundle) {
-    super.onActivityCreated(onActivityCreated)
+  override def onActivityCreated(state: Bundle): Unit = {
+    super.onActivityCreated(state)
+    readArgs(state)
     setEventListeners
 
     tvStackTrace.setText(stackTrace)

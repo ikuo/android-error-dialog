@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="cannot_continue">エラーのため実行を継続できません。</string>
+    <string name="cannot_continue">実行を継続できません。</string>
     <string name="expand_view">表示を展開</string>
     <string name="collapse_view">表示を折りたたむ</string>
     <string name="technical_detail">技術的な詳細</string>
