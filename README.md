@@ -38,6 +38,17 @@ class MyActivity extends FragmentActivity {
 }
 ```
 
+## Building
+
+```
+$ git clone git@github.com:ikuo/android-error-dialog.git
+$ cd android-error-dialog
+$ android update project -p . -t android-19
+$ sbt
+> compile
+> publish-local
+```
+
 ## License
 Apache License 2.0
 
